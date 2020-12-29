@@ -19,5 +19,9 @@ async def nine_nine(ctx):
     response = random.choice(man_words)
     await ctx.send(response)
 
+@bot.command()
+async def test(ctx, *args):
+    await ctx.send('{} arguments: {}'.format(len(args), ', '.join(args)))
+
 #keep_alive()
 bot.run(TOKEN)
